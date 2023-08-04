@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pim Desk</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>PIM Desk</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Product Number</th>
+          <th>Variant Name</th>
+          <th>Load Date</th>
+          <th>Gender</th>
+          <th>Code</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+        <tr>
+          <td>
+            <input
+              type="text"
+              name="product_name"
+              onkeydown="moveCursor(event, 0, 0)"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              name="product_number"
+              onkeydown="moveCursor(event, 0, 1)"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              name="variant_name"
+              onkeydown="moveCursor(event, 0, 2)"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              name="load_date"
+              onkeydown="moveCursor(event, 0, 3)"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              name="gender"
+              onkeydown="moveCursor(event, 0, 4)"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              name="code"
+              onkeydown="moveCursor(event, 0, 5)"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              name="category"
+              onkeydown="moveCursor(event, 0, 6)"
+            />
+          </td>
+          <td><button onclick="saveRowData(this)">Save</button></td>
+          <td><button onclick="enableRowEditing(this)">Edit</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <button onclick="addRow()" id="add-row-btn">Add Row</button>
+    <button onclick="removeLastRow()">Remove</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
